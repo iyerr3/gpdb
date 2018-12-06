@@ -116,7 +116,7 @@ CConfigParamMapping::SConfigMappingElem CConfigParamMapping::m_elements[] =
 		false, // m_fNegate
 		GPOS_WSZ_LIT("Generate optimizer minidump.")
 		},
-             	
+
 		{
 		EopttraceDisableMotions,
 		&optimizer_enable_motions,
@@ -367,6 +367,13 @@ CConfigParamMapping::SConfigMappingElem CConfigParamMapping::m_elements[] =
 		&optimizer_array_constraints,
 		false, // m_negate_param
 		GPOS_WSZ_LIT("Allows the constraint framework to derive array constraints in the optimizer.")
+		},
+
+		{
+		EopttraceEnableExperiment,
+		&optimizer_experimental,
+		false, // m_negate_param
+		GPOS_WSZ_LIT("Enable experimental features.")
 		}
 };
 

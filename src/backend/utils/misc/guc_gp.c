@@ -579,6 +579,7 @@ bool		optimizer_array_constraints;
 bool		optimizer_cte_inlining;
 bool		optimizer_enable_space_pruning;
 bool		optimizer_enable_associativity;
+bool		optimizer_experimental;
 
 /* Analyze related GUCs for Optimizer */
 bool		optimizer_analyze_root_partition;
@@ -3343,6 +3344,18 @@ struct config_bool ConfigureNamesBool_gp[] =
 		&gp_resource_group_bypass,
 		false,
 		assign_gp_resource_group_bypass, NULL
+	},
+
+
+	{
+		{"optimizer_experimental", PGC_USERSET, DEVELOPER_OPTIONS,
+			gettext_noop("Enable experimental features."),
+			NULL,
+			GUC_NO_SHOW_ALL | GUC_NOT_IN_SAMPLE
+		},
+		&optimizer_experimental,
+		false,
+		NULL, NULL, NULL
 	},
 
 	/* End-of-list marker */

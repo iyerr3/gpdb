@@ -450,6 +450,9 @@ extern bool optimizer_enable_dynamictablescan;
 extern bool optimizer_enable_indexscan;
 extern bool optimizer_enable_tablescan;
 
+/* GUCs to enable experimental features in ORCA */
+extern bool optimizer_experimental;
+
 /* Optimizer plan enumeration related GUCs */
 extern bool optimizer_enumerate_plans;
 extern bool optimizer_sample_plans;
